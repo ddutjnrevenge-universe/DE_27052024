@@ -17,6 +17,9 @@
         - [Differences](#differences-2)
     - [Advantages and Disadvantages](#advantages-and-disadvantages-2)
     - [Examples](#examples-2)
+
+**NOTE: There is an example in this repository of Building a Simple ETL with Airflow, PostgreSQL, and Docker!**
+
 # 1. Data Extraction Methods: Online vs. Offline
 Data can be extracted either **online from the source system** or **offline from an already existing structure**. The chosen method depends on the logical extraction capabilities and restrictions of the source system.
 ## Comparison
