@@ -1,0 +1,22 @@
+[2024-05-29T02:55:53.941+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T02:55:54.008+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: recalls_etl_v1.get_raw_data manual__2024-05-29T02:55:50.628790+00:00 [queued]>
+[2024-05-29T02:55:56.083+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: recalls_etl_v1.get_raw_data manual__2024-05-29T02:55:50.628790+00:00 [queued]>
+[2024-05-29T02:55:56.084+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-29T02:55:56.100+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_raw_data> on 2024-05-29 02:55:50.628790+00:00
+[2024-05-29T02:55:56.119+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=70) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-29T02:55:56.128+0000] {standard_task_runner.py:63} INFO - Started process 72 to run task
+[2024-05-29T02:55:56.143+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'recalls_etl_v1', 'get_raw_data', 'manual__2024-05-29T02:55:50.628790+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/recalls_etl_v1.py', '--cfg-path', '/tmp/tmpdkzaplmh']
+[2024-05-29T02:55:56.149+0000] {standard_task_runner.py:91} INFO - Job 13: Subtask get_raw_data
+[2024-05-29T02:55:56.301+0000] {task_command.py:426} INFO - Running <TaskInstance: recalls_etl_v1.get_raw_data manual__2024-05-29T02:55:50.628790+00:00 [running]> on host fdca39f1bf3a
+[2024-05-29T02:55:56.537+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='recalls_etl_v1' AIRFLOW_CTX_TASK_ID='get_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-29T02:55:50.628790+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-29T02:55:50.628790+00:00'
+[2024-05-29T02:55:56.543+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T02:56:22.716+0000] {logging_mixin.py:188} INFO - <Response [200]>
+[2024-05-29T02:56:22.735+0000] {logging_mixin.py:188} INFO - Added 29648 recalled records.
+[2024-05-29T02:56:23.041+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-29T02:56:23.042+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T02:56:23.051+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=recalls_etl_v1, task_id=get_raw_data, run_id=manual__2024-05-29T02:55:50.628790+00:00, execution_date=20240529T025550, start_date=20240529T025554, end_date=20240529T025623
+[2024-05-29T02:56:23.088+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-29T02:56:23.111+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T02:56:23.115+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
